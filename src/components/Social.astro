@@ -1,0 +1,32 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<section class="flex flex-col items-center px-6 max-w-5xl mx-auto w-full">
+  <h2 class="font-semibold text-lg">Social</h2>
+  <ul class="flex flex-row w-full overflow-x-auto">
+    <li><a><Icon name="mdi:github" />Github</a></li>
+    <li><a><Icon name="mdi:github" />Github</a></li>
+    <li><a><Icon name="mdi:github" />Github</a></li>
+    <li><a><Icon name="mdi:github" />Github</a></li>
+    <li><a><Icon name="mdi:github" />Github</a></li>
+    <li><a><Icon name="mdi:github" />Github</a></li>
+    <li><a><Icon name="mdi:github" />Github</a></li>
+  </ul>
+</section>
+
+<style>
+  li {
+    @apply text-5xl px-6 py-3;
+  }
+  a {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    @apply text-gray-600;
+  }
+  a > svg {
+    @apply h-12 w-12;
+  }
+</style>

@@ -1,0 +1,35 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<div class="bg-white sticky top-0">
+  <nav class="max-w-5xl z-50 relative mx-auto flex flex-row justify-between items-center px-6 py-2">
+    <div class="flex-1">
+      <a class="text-4xl lg:text-5xl font-bold" href="/">Falentio</a>
+    </div>
+    <div class="flex-auto sm:flex hidden flex-row justify-center gap-2 font-medium">
+      <a href="#">Home</a>
+      <a href="#">Pricing</a>
+      <a href="#">About</a>
+    </div>
+    <div class="flex-1 flex flex-row justify-end">
+      <!-- <span class="bg-blue-600 text-white rounded-md px-2 py-1 h-8 font-semibold max-sm:hidden">Start</span> -->
+      <label for="menu" class="sm:hidden"><Icon name="mdi:menu" /></label>
+    </div>
+  </nav>
+  <label class="z-30 absolute top-full w-full flex flex-col">
+    <input id="menu" type="checkbox" class="peer hidden" />
+    <div class="min-h-screen inset-0 fixed peer-checked:block hidden"></div>
+    <div class="hidden peer-checked:flex z-40 relative px-6 py-4 flex-col items-end bg-white">
+      <a href="#">Home</a>
+      <a href="#">Pricing</a>
+      <a href="#">About</a>
+    </div>
+  </label>
+</div>
+
+<style>
+  label > svg {
+    @apply w-8 h-8;
+  }
+</style>

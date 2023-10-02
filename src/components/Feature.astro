@@ -1,0 +1,44 @@
+---
+import { Icon } from "astro-icon";
+const features = [
+  {
+    title: "Performant",
+    icon: "mdi:lightning-bolt",
+    desc: "I always keep in mind to create Website as Performant as possible.",
+  },
+  {
+    title: "Responsive",
+    icon: "mdi:cellphone-android",
+    desc: "Make desktop user and mobile user has comfortable experience, without ugly element on mobile",
+  },
+  {
+    title: "Reuseable",
+    icon: "mdi:code-tags",
+    desc: "Keeping projects with reuseable code and minimal code per file, so moving Element became easy",
+  },
+] as const;
+---
+
+<section class="px-6 py-12 max-w-5xl mx-auto w-full space-y-4">
+  <h2 class="font-bold text-4xl">Everything My Website has.</h2>
+  <span class="text-slate-600"> This list was my objective whenever creating website.</span>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-2">
+    {
+      features.map(({ title, icon, desc }) => (
+        <div class="bg-blue-300 p-6 py-4 rounded-md flex flex-col">
+          <span class="font-semibold text-2xl inline-flex flex-row items-center">
+            <Icon name={icon} />
+            {title}
+          </span>
+          <span> {desc} </span>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  span > svg {
+    @apply h-8 w-8 pr-1;
+  }
+</style>

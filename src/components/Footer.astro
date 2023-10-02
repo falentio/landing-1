@@ -1,0 +1,36 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<div class="bg-zinc-900 text-white px-6 py-4">
+  <footer class="max-w-2xl mx-auto flex flex-row flex-wrap justify-between gap-4 items-center">
+    <span class="text-7xl max-sm:w-full"> Falentio</span>
+    <div class="max-sm:w-full">
+      <span class="text-xl font-semibold"> Social</span>
+      <ul class="flex flex-col gap-0.5">
+        <li>
+          <a><Icon name="mdi:github" /> Github</a>
+        </li><li>
+          <a><Icon name="mdi:github" /> Github</a>
+        </li><li>
+          <a><Icon name="mdi:github" /> Github</a>
+        </li><li>
+          <a><Icon name="mdi:github" /> Github</a>
+        </li>
+      </ul>
+    </div>
+    <span class="text-lg w-full"> Copyright 2023 &copy; Kevin Falentio</span>
+  </footer>
+</div>
+
+<style>
+  * {
+    @apply text-center;
+  }
+  a {
+    @apply inline-flex flex-row items-center gap-1;
+  }
+  svg {
+    @apply w-6 h-6;
+  }
+</style>
